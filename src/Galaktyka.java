@@ -38,10 +38,11 @@ public class Galaktyka {
 
             // a matrix is always created in the "W" orientation
             // matrix is only printed according to orientation
+
             // filling up whole matrix with blanks
             for (int i = 0; i < matrixHeight; i++) {
                 for (int j = 0; j < matrixWidth; j++) {
-                    matrixOfStars[i][j] = ".";
+                    matrixOfStars[i][j] = " ";
                 }
             }
 
@@ -119,7 +120,7 @@ public class Galaktyka {
             lightYearsCounter = 0;
             for (int i = 0; i < matrixHeight; i++) {
                 for (int j = 0; j < matrixWidth; j++) {
-                    if (matrixOfStars[i][j].equals(".")) {
+                    if (matrixOfStars[i][j].equals(" ")) {
                         lightYearsCounter++;
                     }
                 }
