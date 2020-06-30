@@ -100,14 +100,19 @@ public class Galaktyka {
             }
 
             // printing in expected orientation
-            if (orientation.equals("W")) {
-                printWestOrientation(matrixWidth, matrixHeight, matrixOfStars);
-            } else if (orientation.equals("E")) {
-                printEastOrientation(matrixWidth, matrixHeight, matrixOfStars);
-            } else if (orientation.equals("N")) {
-                printNorthOrientation(matrixWidth, matrixHeight, matrixOfStars);
-            } else if (orientation.equals("S")) {
-                printSouthOrientation(matrixWidth, matrixHeight, matrixOfStars);
+            switch (orientation) {
+                case "W":
+                    printWestOrientation(matrixWidth, matrixHeight, matrixOfStars);
+                    break;
+                case "E":
+                    printEastOrientation(matrixWidth, matrixHeight, matrixOfStars);
+                    break;
+                case "N":
+                    printNorthOrientation(matrixWidth, matrixHeight, matrixOfStars);
+                    break;
+                case "S":
+                    printSouthOrientation(matrixWidth, matrixHeight, matrixOfStars);
+                    break;
             }
 
             // calculating light years
