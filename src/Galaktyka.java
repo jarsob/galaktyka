@@ -8,6 +8,8 @@ public class Galaktyka {
         int loopSize, numberOfStarsInRow;
         String paramFromArgs;
 
+        //Fryderyk: Please, don't use the absurdly large telescope size
+
         try {
 
             //check if telescope size is valid
