@@ -37,7 +37,7 @@ public class Galaktyka {
         matrixOfStars[1][matrixWidth - 1] = "*";
 
 
-        System.out.println("telescope size: " + telescopeSize);
+        System.out.println("telescope size: " + telescopeSize + ", orientation: " + orientation);
 
 
         coordinateY = 0;
@@ -85,28 +85,36 @@ public class Galaktyka {
 
         }
 
-
         // printing in expected orientation
+        if (orientation.equals("W")) {
+            printWestOrientation(matrixWidth, matrixHeight, matrixOfStars);
+        } else if (orientation.equals("E")) {
+            printEastOrientation(matrixWidth, matrixHeight, matrixOfStars);
+        } else if (orientation.equals("N")) {
+            printNorthOrientation(matrixWidth, matrixHeight, matrixOfStars);
+        } else if (orientation.equals("S")) {
+            printSouthOrientation(matrixWidth, matrixHeight, matrixOfStars);
+        }
 
-        //W
-        System.out.println("W");
-        printWestOrientation(matrixWidth, matrixHeight, matrixOfStars);
-        System.out.println();
-
-        //E
-        System.out.println("E");
-        printEastOrientation(matrixWidth, matrixHeight, matrixOfStars);
-        System.out.println();
-
-        //N
-        System.out.println("N");
-        printNorthOrientation(matrixWidth, matrixHeight, matrixOfStars);
-        System.out.println();
-
-        //S
-        System.out.println("S");
-        printSouthOrientation(matrixWidth, matrixHeight, matrixOfStars);
-        System.out.println();
+//        //W
+//        System.out.println("W");
+//        printWestOrientation(matrixWidth, matrixHeight, matrixOfStars);
+//        System.out.println();
+//
+//        //E
+//        System.out.println("E");
+//        printEastOrientation(matrixWidth, matrixHeight, matrixOfStars);
+//        System.out.println();
+//
+//        //N
+//        System.out.println("N");
+//        printNorthOrientation(matrixWidth, matrixHeight, matrixOfStars);
+//        System.out.println();
+//
+//        //S
+//        System.out.println("S");
+//        printSouthOrientation(matrixWidth, matrixHeight, matrixOfStars);
+//        System.out.println();
 
         // calculating light years
         lightYearsCounter = 0;
